@@ -12,7 +12,7 @@
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />	
 
-	
+	 <beans:import resource="jasper-views.xml"/>
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
@@ -25,6 +25,11 @@
 
 	<!-- Imports user-defined @Controller beans that process client requests -->
 	<!--<beans:import resource="controllers.xml" />-->
+
+    <beans:bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <beans:property name="location" value="/WEB-INF/spring/app/jasper-views.xml"/>
+        <beans:property name="order" value="0"/>
+    </beans:bean>
 
 
 	<beans:bean id="validator"
