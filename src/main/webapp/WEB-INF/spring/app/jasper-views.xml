@@ -9,6 +9,7 @@
 		http://www.springframework.org/schema/util 
 		http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
+    <!--here all the url value should contains the valid path for the jrxml file-->
 
     <bean id="pdfReport"
           class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
@@ -18,19 +19,19 @@
 
     <bean id="xlsReport"
           class="org.springframework.web.servlet.view.jasperreports.JasperReportsXlsView"
-          p:url="classpath:tree-template.jrxml"
+          p:url="classpath:chathuranga-sample-report.jrxml"
           p:reportDataKey="datasource" />
 
 
     <bean id="htmlReport"
           class="org.springframework.web.servlet.view.jasperreports.JasperReportsHtmlView"
-          p:url="classpath:tree-template.jrxml"
+          p:url="classpath:chathuranga-sample-report.jrxml"
           p:reportDataKey="datasource" />
 
 
     <bean id="csvReport"
           class="org.springframework.web.servlet.view.jasperreports.JasperReportsCsvView"
-          p:url="classpath:tree-template.jrxml"
+          p:url="classpath:chathuranga-sample-report.jrxml"
           p:reportDataKey="datasource"/>
 
 
